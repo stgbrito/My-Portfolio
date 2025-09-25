@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Lato, "sans-serif";
+}
+
+body {
+    margin-top: 80px;
+}
+
+.header {
+    text-align: center;
+}
+
+.nav {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #1c2023;
+}
+
+.nav__link:not(:last-of-type) {
+    margin-right: 2.5rem;
+}
+
+.nav__link--active {
+    font-weight: bold;
+    border-bottom: 2px solid #380755;
+}
+
+.nav__link:hover {
+    font-weight: bold;
+}
+
+
+.main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.main--about,
+.main--error {
+    max-width: 500px;
+    padding: 0 1rem;
+    line-height: 150%;
+    flex-direction: column;
+}
+
+
+.contact {
+  display: flex;
+  align-items: center;      /* Vertically aligns the icon and text to their center */
+  gap: 1ch;                 /* Creates a clean 1-character space between them */
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;    /* Adds space between the rows */
+}
+
+.main--contact dl {
+  margin-top: 4rem;
+  padding: 0;
+}
+
+.contact dd {
+  margin: 0; /* Resets any default browser styles */
+}
+
+.contact dt {
+  width: 40px;              /* Ensures all icons have the same space, creating a clean line */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;  /* Centers the icon inside its 40px space */
+}
+
+.main--contact {
+  display: flex;
+  justify-content: center; /* This is the key: it centers the child element (<dl>) */
+}
+
+.contact__details {
+    margin-left: 0;
+}
+
+.contact__link {
+    color: #1c2023;
+    text-decoration: none;
+    
+}
+
+.contact__link:hover {
+    color: #380755;
+    font-weight: bold;
+    box-shadow: 0 2px 0 0 #380755;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* This makes the icon inherit the color of its parent text link */
+}
+
+.u-bare-link {
+    text-decoration: none;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    justify-content: center;
+    justify-items: center;
+    max-width: 21.875rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 48.75em) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 45rem;
+    }
+}
+
+@media (min-width: 70em) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 68rem;
+    }
+}
+
+.project-card {
+    padding: 0.75rem 0;
+}
+
+.project-card__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card__meta {
+    padding: 0 1.25rem;
+}
+
+.project-card__name {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #1c2023;
+}
+
+.project-card:hover .project-card__image {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-card__name {
+    color: #380755;
+    font-weight: bold;
+    box-shadow: 0 2px 0 0 #380755;    
+}
+
+.categories {
+    display: flex;
+    padding: 0;
+    margin: 0 0 0.75rem 1rem;
+    color: #380755;
+    list-style: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.075rem;
+}
+
+.categories__tag:not(:last-of-type)::after {
+    content: "|";
+    margin: 0 0.5rem;
+}
+
+.hero{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.project {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+.project__content {
+    line-height: 150%;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 48.75em) {
+    .project {
+      flex-direction: row;
+      padding: 0;
+    }
+
+        .project__content {
+        flex: 7;
+        margin-right: 3rem;
+        padding: 0;
+    }
+}
+
+.project__heading {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 150%;
+}
+
+.project__heading--meta {
+    font-size: inherit;
+    margin-bottom: 1rem;
+}
+
+.project__meta-group {
+    margin-bottom: 1rem;
+    opacity: 80%;
+}
+
+.project__meta-group,
+.cta {
+    padding: 1rem;
+    background-color: #3807555b;
+    border-radius: 6px;
+}
+
+.cta {
+    opacity: 80%;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.cta__icon {
+    margin-right: 0.5rem;
+    transform: translateY(1px);
+    width: 22px;
+    height: 22px;
+}
+
+.cta:hover {
+    opacity: 100%;
+    background-color: #380755;
+    color: white;
+}
+
+.technology-list {
+    list-style: none;
+    padding-left: 0.75rem;
+    margin: 0;
+    line-height: 1.75rem;
+}
+
+.technology-list li::before {
+    content: "✓";
+    color: #380755;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    display: inline-block;
+    width: 1rem;
+}

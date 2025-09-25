@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <mete http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Alonso Brito  |  Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <main class="main main--error">
+        <h1>404 - Page Not Found</h1>
+        <p>
+            Sorry, we couldn't find the page you were looking for.
+            It may have been misspelled, or it doesn't exist anymore.
+        </p>
+        <a class="cta" href="{{ url_for('home') }}">
+                        <svg class="cta__icon" aria-hidden="true">
+                        <use href="{{ url_for('static', filename='img/icons.svg') }}#icon-pointer-click"></use>
+                        </svg>
+                        Go back to home page
+                    </a>
+    </main>
+</body>
+</html>

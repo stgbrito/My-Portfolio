@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="main main--contact">
+    <dl>
+    <div class="contact">
+        <dt>
+            <svg class="icon" aria-hidden="true">
+          <use href="{{ url_for('static', filename='img/icons.svg') }}#icon-email"></use>
+        </svg>
+        </dt>
+        <dd class ="contact__details">
+            <a class="contact__link" 
+               href="mailto:s.alonsobrito@gmail.com" 
+               aria-label="Email Santiago Alonso Brito">
+                s.alonsobrito@gmail.com
+            </a>
+        </dd>
+    </div>
+
+    <div class="contact">
+        <dt>
+            <svg class="icon" aria-hidden="true">
+          <use href="{{ url_for('static', filename='img/icons.svg') }}#icon-github"></use>
+        </svg>
+        </dt>
+        <dd class ="contact__details">
+            <a class="contact__link" 
+               href="https://github.com/stgbrito" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="View Santiago Alonso Brito's GitHub profile">
+                stgbrito
+            </a>
+        </dd>
+    </div>
+
+    <div class="contact">
+        <dt>
+            <svg class="icon" aria-hidden="true">
+          <use href="{{ url_for('static', filename='img/icons.svg') }}#icon-linkedin"></use>
+        </svg>
+        </dt>
+        <dd class ="contact__details">
+            <a class="contact__link" 
+               href="https://www.linkedin.com/in/stgbrito/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="View Santiago Alonso Brito's LinkedIn profile">
+                stgbrito
+            </a>
+        </dd>
+    </div>
+</dl>
+</main>
+{% endblock %}
