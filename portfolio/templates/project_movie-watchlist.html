@@ -1,0 +1,84 @@
+{% extends "base.html" %} {% block content %}
+<main class="main main--project">
+  <div>
+    <img
+      class="hero"
+      src="{{ url_for('static', filename=project['hero']) }}"
+      alt="{{ project['name'] }} hero image"
+      width="100%"
+      height="250"
+      style="object-fit: cover; object-position: center 50%; border-radius: 6px"
+    />
+
+    <article class="project">
+      <article class="project__content">
+        <h2 class="project__heading">{{ project['name'] }}</h2>
+
+        <p>
+          A full-stack web application designed for managing, tracking, and
+          curating a personal movie watchlist. Built with a focus on clean
+          architecture and user experience, the platform allows users to
+          securely catalog movies, track their viewing history, and rate their
+          favorite films. The project demonstrates robust back-end integration,
+          secure user authentication, and automated cloud deployment.
+        </p>
+        <section id="key-features">
+          <h2>Key Features</h2>
+          <ul>
+            <li>
+              <strong>Secure User Authentication:</strong>
+              Features a comprehensive registration and login system, complete
+              with email-based password recovery.
+            </li>
+            <li>
+              <strong>Dynamic Watchlist Management:</strong>
+              Users can seamlessly add movies to their list and edit detailed
+              metadata, including the director, cast, release year, custom tags,
+              and external video/image links.
+            </li>
+            <li>
+              <strong>Activity Tracking &amp; Rating:</strong>
+              Includes built-in tools to rate movies on a 5-star scale and mark
+              them as watched, which automatically logs the viewing date.
+            </li>
+            <li>
+              <strong>UI/UX Customization:</strong>
+              Features a responsive, user-friendly interface with a seamless
+              dark mode toggle for personalized viewing.
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <section>
+        <article class="project__meta-group">
+          <h3 class="project__heading project__heading--meta">
+            Technologies used
+          </h3>
+          <ul class="technology-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>MongoDB</li>
+          </ul>
+        </article>
+
+        <a
+          class="cta"
+          href="{{ project['prod'] }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="cta__icon" aria-hidden="true">
+            <use
+              href="{{ url_for('static', filename='img/icons.svg') }}#icon-pointer-click"
+            ></use>
+          </svg>
+          View in production
+        </a>
+      </section>
+    </article>
+  </div>
+</main>
+{% endblock %}

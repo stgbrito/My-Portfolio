@@ -4,6 +4,14 @@ app = Flask(__name__)
 
 projects = [
     {
+        "name": "Movie Watchlist app with Flask and MongoDB",
+        "thumb": "img/movie-watchlist.png",
+        "hero": "img/movie-watchlist-hero.png",
+        "categories": ["Python", "Web"],
+        "slug": "movie-watchlist",
+        "prod": "https://watchlist.alonsobrito.xyz/",
+    },
+    {
         "name": "Habit tracking app with Python and MongoDB",
         "thumb": "img/habit-tracker.png",
         "hero": "img/habit-tracker-hero.png",
